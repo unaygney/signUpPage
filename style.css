@@ -1,0 +1,267 @@
+/* # Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+- Red: hsl(0, 100%, 74%) 
+- Green: hsl(154, 59%, 51%)
+
+### Accent
+
+- Blue: hsl(248, 32%, 49%)
+
+### Neutral
+
+- Dark Blue: hsl(249, 10%, 26%) 
+- Grayish Blue: hsl(246, 25%, 77%)
+
+## Typography
+
+### Body Copy
+
+- Font size: 16px
+
+### Font
+
+- Family: [Poppins](https://fonts.google.com/specimen/Poppins)
+- Weights: 400, 500, 600, 700 */
+
+
+:root {
+    --primary-red-color: hsl(0, 100%, 74%);
+    --primary-green-color: hsl(154, 59%, 51%);
+    --accent-blue-color: hsl(248, 32%, 49%);
+    --neutral-dark-blue: hsl(249, 10%, 26%);
+    --neutral-grayish-blue: hsl(246, 25%, 77%);
+}
+
+
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+}
+
+body {
+
+    width: 100vw;
+    min-height: 100vh;
+    background-image: url(./images/bg-intro-desktop.png);
+    background-color: var(--primary-red-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+
+.container {
+    padding: 2rem;
+    display: flex;
+    color: #fff;
+    gap: 2em;
+}
+
+/* left side */
+.left-side {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.content {
+    padding: 0 1rem;
+    max-width: 600px;
+}
+
+.left-side h1 {
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+
+}
+
+.left-side p {
+    line-height: 1.5rem;
+    font-weight: 500;
+}
+
+
+
+/* right side */
+.right-side {
+    flex: 1;
+    max-width: 450px;
+}
+
+
+.upper-div {
+    background-color: var(--accent-blue-color);
+    padding: 1rem;
+    text-align: center;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    box-shadow: 0px 10px 10px -1px rgba(66, 65, 66, 0.88);
+
+
+}
+
+.upper-div p {
+    color: #fff;
+    font-size: 12px;
+    letter-spacing: .9px;
+    font-weight: 400;
+}
+
+.upper-div p a {
+    color: #fff;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+/* form */
+
+.form {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.form-control {
+    position: relative;
+    margin: .5rem 0rem;
+}
+
+.form-control.success input{
+    border: 1px solid var(--primary-green-color);
+}
+.form-control.error input{
+    border: 1px solid var(--primary-red-color);
+}
+.form-control.error .error-icon , .form-control.error .error-message {
+   visibility: visible;
+}
+
+input {
+    width: 100%;
+    height: 40px;
+    border-radius: 3px;
+    border: 1px solid #d1d1d1;
+    padding: 0 1rem;
+
+}
+
+input::placeholder {
+    color: #8b8b8b;
+}
+
+
+input:focus {
+    border: 1px solid black
+}
+
+.error-icon{
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    transform: translateX(-50% , -50%);
+    visibility: hidden;
+}
+
+.error-message{
+    color: var(--primary-red-color);
+    text-align: end;
+    display: block;
+    font-size: 10px;
+    padding-top: .2rem;
+    visibility: hidden;
+}
+
+
+
+.btn {
+    width: 100%;
+    height: 40px;
+    background-color: var(--primary-green-color);
+    border: 0;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    color: #fff;
+    letter-spacing: 1.1px;
+    margin-bottom: .7rem;
+}
+
+.btn:hover{
+    opacity: 0.8;
+    cursor: pointer;
+    
+}
+
+.form p {
+    color: var(--neutral-grayish-blue);
+    font-size: 10px;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.form p span {
+    color: var(--primary-red-color);
+    font-weight: 700;
+    cursor: pointer;
+}
+
+@media (max-width : 478px) {
+.container{
+    flex-direction: column;
+    padding: 4rem 1rem;
+}
+
+.content{
+    text-align: center;
+
+}
+
+.left-side h1{
+    font-size: 30px;
+}
+
+.left-side p {
+    font-size: 18px;
+    line-height: 1.7rem;
+
+    
+}
+
+.upper-div {
+    padding: .5rem;
+    margin-bottom: 2rem;
+}
+
+.upper-div p{
+    font-size: 18px;
+    line-height: 2rem;
+   
+}
+
+.form {
+    padding: 1rem;
+}
+
+.form p {
+    font-size: 12px;
+}
+
+}
